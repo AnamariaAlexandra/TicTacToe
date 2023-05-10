@@ -1,0 +1,382 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*  
+---------------- first-page -----------------------
+*/
+.first--container {
+  background-color: #ade8f4;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 
+---------------- first-page-input -----------------------
+*/
+
+body{
+background-color: #457b9d;
+background-image: url(./back.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+.container{
+
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.form-group{
+  margin-bottom: 1em;
+  transition: all .3s;
+}
+
+.form-label{
+  font-size: 20px;
+  color:black;
+  display: block;
+  opacity:1;
+  transform: translateY(-1.8em);
+  transform-origin: 0 0 ;
+  transition: all .3s;
+  margin-left: 5%;
+}
+
+.form-input{
+  color:black;
+  font-size: 17px;;
+  margin-top:2%;
+  height: 2em;
+  box-shadow: none;
+  background-color: #ffe2ff;
+  border-radius:13px;
+  border: none;
+  border-color:#ccc;
+  border-style: none none solid none;
+  width: 120%;
+  transition: all .5s;
+  padding: 5px;
+
+}
+
+.form-input::placeholder{
+  color: transparent;
+
+}
+.form-input:focus{
+
+  box-shadow: none;
+  outline: none;
+  border-color: #457b9d;
+
+}
+
+.form-group:focus-within{
+
+  transform: scale(1.02);
+
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown)+.form-label{
+
+  transform: translateY(-3.6em) scale(1.1)
+
+}
+
+a button{
+  color:#023e8a;
+  margin-top: 20px; 
+  font-size: 18px;
+  background-color: transparent;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  margin-left: 49%;
+  border: none;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 20px #5a189a;
+
+}
+
+/* ---------------- first-page-button ----------------------- */
+
+/* 
+---------------- second-page -----------------------
+*/
+
+.player-menu {
+  margin: 5% 0;
+  width: 10%;
+  font-size: 37px;
+  justify-content: space-evenly;
+}
+
+.player-score{
+  position: relative;
+}
+
+.vertical-line {
+  position: absolute;
+  background-color: black;
+  width: 5px;
+  height: 89.5%;
+  margin-top: 9%;
+}
+
+.orizontal-line {
+  background-color: black;
+  width: 80%;
+  height: 5px;
+  position: absolute;
+  margin-top: 23%;
+}
+
+/* 
+---------------- second-page- player score table-----------------------
+*/
+
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+  border: 3px solid black;
+  letter-spacing: 1px;
+  position:absolute;
+}
+
+td,
+th {
+  border: 3px solid black;
+  padding: 5px 25px;
+  font-size: 35px;
+  text-align: center;
+}
+
+/* .loser {
+  margin-left: 45%;
+}
+
+.winner {
+  margin-left: 45%;
+} */
+
+/* 
+---------------- second-page-game-grid -----------------------
+*/
+.right-hand-side {
+
+  background-image: url(./back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #a2d2ff;
+  height: 100vh;
+}
+
+
+
+.gameplay-space {
+  padding: 0;
+  width: 50%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: -20px; 
+  overflow: hidden;
+  outline: none;
+}
+
+.box {
+
+  text-align: center;
+  /* background-color: red; */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 2px solid black;
+
+}
+
+
+.zero-inside {
+  width: 5%;
+  height: 10%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  border: 10px solid #ffe2ff;
+  box-shadow:8px 8px 10px #5a189a;
+}
+
+.x-shape {
+  width: 5%;
+  height: 88%;
+  border-radius: 50px;
+  transform: rotate(35deg);
+  background-color: #ffe2ff;
+  box-shadow:10px 5px 8px #5a189a;
+
+}
+
+.x-inside {
+  width: 5%;
+  height: 89%;
+  border-radius: 50px;
+  transform: rotate(-35deg);
+  margin-left: -16px;
+  background-color: #ffe2ff;
+  box-shadow:3px 4px 8px #5a189a;
+
+}
+
+.draw {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  margin-top: -1%;
+
+}
+
+.refresh,
+.close {
+  border-radius: 50% ;
+  height: 70px;
+  width: 70px;
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding:0;
+}
+
+.refresh{
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+}
+
+.refresh img,
+.close img{
+  margin-right: 0;
+  height: 60%;
+  width: 65%;
+
+}
+
+.btns{
+
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 55%;
+
+}
+
+
+@media only screen and (max-width:920px ) {
+
+    .box{
+
+      outline: 1px solid rgba(0, 0, 0, 0.7);
+
+    }
+  
+    .x-shape{
+      width: 5%;
+      height: 60%;
+      border-radius: 50px;
+      transform: rotate(35deg);
+      box-shadow:5px 1px 8px #5a189a;
+    }
+
+    .x-inside {
+      width: 5%;
+      height: 61%;
+      border-radius: 50px;
+      transform: rotate(-35deg);
+      margin-left: -5px;
+    }
+   
+    .zero-inside {
+      width: 7%;
+      height: 6.5%;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 100;
+      border: 5px solid #ffe2ff;
+      box-shadow:3px 3px 8px #5a189a;
+    }
+
+    .player-menu {
+      margin: 9% 0;
+      width: 10%;
+      font-size: 37px;
+      justify-content: space-evenly;
+    }
+
+    td,
+    th {
+      border: 1px solid #560bad;
+      padding: 2px 18px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .draw{
+
+      font-size: 30px;
+      margin: 5% 0;
+  
+    }
+    
+    .btns{
+
+      margin-left: 40%;
+
+    }
+
+    .refresh img,
+    .close img{
+
+      width: 55%;
+      height: 55%;
+
+    }
+}
+
+@media(max-height: 700px ){
+
+  .draw{
+
+    font-size: 20px;
+    margin-top: 0px;
+
+  }
+
+  .refresh img,
+  .close img{
+
+    width: 40%;
+    height: 40%;
+
+  }
+
+}
