@@ -113,12 +113,33 @@ a button{
   box-shadow: 0.1px 0.1px 20px #5a189a;
 
 }
+.refresh
+{
+  background-color: transparent;
+  border-radius: 50% ;
+  height: 70px;
+  width: 70px;
+  border-style: none;
+  cursor: pointer;
+  padding:0;
+  position: absolute; 
+  right: 350px;
+  bottom: 20px;
+}
 
-/* ---------------- first-page-button ----------------------- */
+.refresh{
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+}
 
-/* 
----------------- second-page -----------------------
-*/
+.refresh img,
+.close img{
+
+  height: 60%;
+  width: 65%;
+}
+
+
 
 .player-menu {
   margin: 5% 0;
@@ -167,17 +188,26 @@ th {
   text-align: center;
 }
 
-/* .loser {
-  margin-left: 45%;
-}
-
-.winner {
-  margin-left: 45%;
-} */
 
 /* 
 ---------------- second-page-game-grid -----------------------
 */
+.vertical-line {
+  position: absolute;
+  background-color: black;
+  width: 5px;
+  height: 89.5%;
+  margin-top: 9%;
+}
+
+.orizontal-line {
+  background-color: black;
+  width: 80%;
+  height: 5px;
+  position: absolute;
+  margin-top: 23%;
+}
+
 .right-hand-side {
 
   background-image: url(./back.jpg);
@@ -191,15 +221,13 @@ th {
   height: 100vh;
 }
 
-
-
 .gameplay-space {
   padding: 0;
   width: 50%;
   height: 50%;
   display: grid;
   grid-template-columns: auto auto auto;
-  margin-top: -20px; 
+  margin-bottom: auto;
   overflow: hidden;
   outline: none;
 }
@@ -207,7 +235,6 @@ th {
 .box {
 
   text-align: center;
-  /* background-color: red; */
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -215,7 +242,6 @@ th {
   outline: 2px solid black;
 
 }
-
 
 .zero-inside {
   width: 5%;
@@ -254,129 +280,5 @@ th {
   font-weight: bold;
   color: black;
   margin-top: -1%;
-
-}
-
-.refresh,
-.close {
-  border-radius: 50% ;
-  height: 70px;
-  width: 70px;
-  border-style: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding:0;
-}
-
-.refresh{
-  transform: rotate(180deg);
-  transform: scaleX(-1);
-}
-
-.refresh img,
-.close img{
-  margin-right: 0;
-  height: 60%;
-  width: 65%;
-
-}
-
-.btns{
-
-  width: 20%;
-  display: flex;
-  flex-direction: row;
-  margin-left: 55%;
-
-}
-
-
-@media only screen and (max-width:920px ) {
-
-    .box{
-
-      outline: 1px solid rgba(0, 0, 0, 0.7);
-
-    }
-  
-    .x-shape{
-      width: 5%;
-      height: 60%;
-      border-radius: 50px;
-      transform: rotate(35deg);
-      box-shadow:5px 1px 8px #5a189a;
-    }
-
-    .x-inside {
-      width: 5%;
-      height: 61%;
-      border-radius: 50px;
-      transform: rotate(-35deg);
-      margin-left: -5px;
-    }
-   
-    .zero-inside {
-      width: 7%;
-      height: 6.5%;
-      border-radius: 50%;
-      position: absolute;
-      z-index: 100;
-      border: 5px solid #ffe2ff;
-      box-shadow:3px 3px 8px #5a189a;
-    }
-
-    .player-menu {
-      margin: 9% 0;
-      width: 10%;
-      font-size: 37px;
-      justify-content: space-evenly;
-    }
-
-    td,
-    th {
-      border: 1px solid #560bad;
-      padding: 2px 18px;
-      font-size: 28px;
-      text-align: center;
-    }
-
-    .draw{
-
-      font-size: 30px;
-      margin: 5% 0;
-  
-    }
-    
-    .btns{
-
-      margin-left: 40%;
-
-    }
-
-    .refresh img,
-    .close img{
-
-      width: 55%;
-      height: 55%;
-
-    }
-}
-
-@media(max-height: 700px ){
-
-  .draw{
-
-    font-size: 20px;
-    margin-top: 0px;
-
-  }
-
-  .refresh img,
-  .close img{
-
-    width: 40%;
-    height: 40%;
-
-  }
 
 }
